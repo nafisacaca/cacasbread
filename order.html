@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order - Caca's Bread</title>
+
+  <link rel="icon" href="images/logobaru-2.png" type="image/gif" sizes="35x35">
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!--slick slider stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- slick slider -->
+
+  <link rel="stylesheet" href="css/slick-theme.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  
+  <style>
+    body {
+      background-color: #f8f8f8;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .form_section {
+      padding: 60px 0;
+    }
+
+    .form_box {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .form_box h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    .form-control {
+      border-radius: 8px;
+    }
+
+    .btn-order {
+      background-color: #46200b;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-order:hover {
+      background-color: transparent;
+      color: #46200b;
+      border: 2px solid ;
+    }
+
+  </style>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">  
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/logobaru-2.png" alt="" width="70px">
+              Caca's Bread
+            </a>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="products.html" id="productsDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    Products
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                    <a class="dropdown-item" href="#chocolate">Chocolate</a>
+                    <a class="dropdown-item" href="#matcha">Matcha</a>
+                    <a class="dropdown-item" href="#strawberry">Strawberry</a>
+                    <a class="dropdown-item" href="#vanilla">Vanilla</a>
+                    <a class="dropdown-item" href="#cheese">Cheese</a>
+                    <a class="dropdown-item" href="#tiramisu">
+                      Tiramisu <span class="badge bg-secondary text-light">New</span>
+                    </a>
+                    
+                    
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="testimonial.html">Testimonial</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="order.html">Order</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
+    </div>
+
+  <!-- Form Section -->
+  <section class="form_section">
+    <div class="container">
+      <div class="form_box">
+        <div class="heading_container">
+        <h2>	Caca’s Bread Order Form</h2>
+      </div>
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" class="form-control" id="nama" required>
+          </div>
+          <div class="form-group">
+            <label for="telepon">Nomor HP / WhatsApp</label>
+            <input type="telp" class="form-control" id="telepon" required>
+          </div>
+
+          <!-- Varian -->
+          <div class="form-group">
+            <label for="varian">Pilih Varian</label>
+            <select class="form-control" id="varian" required>
+              <option value="">-- Pilih Varian --</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="matcha">Matcha</option>
+              <option value="strawberry">Strawberry</option>
+              <option value="vanilla">Vanilla</option>
+              <option value="cheese">Cheese</option>
+              <option value="tiramisu">Tiramisu</option>
+            </select>
+          </div>
+
+          <!-- Produk berdasarkan varian -->
+          <div class="form-group">
+            <label for="produk">Pilih Produk</label>
+            <select class="form-control" id="produk" required>
+              <option value="">-- Pilih Produk --</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="jumlah">Jumlah</label>
+            <input type="number" class="form-control" id="jumlah" min="1" required>
+          </div>
+
+          <div class="form-group">
+            <label for="alamat">Alamat Pengiriman</label>
+            <textarea class="form-control" id="alamat" rows="3" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="catatan">Catatan Tambahan</label>
+            <textarea class="form-control" id="catatan" rows="2"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="pembayaran">Metode Pembayaran</label>
+            <select class="form-control" id="pembayaran" required>
+              <option value="">-- Pilih Metode Pembayaran --</option>
+              <option>Transfer Bank</option>
+              <option>E-Wallet (OVO/DANA/GoPay)</option>
+              <option>COD</option>
+            </select>
+            <small class="form-text text-muted">
+              *Total pembayaran akan dikonfirmasikan melalui WhatsApp apabila struk sudah keluar.
+            </small>
+          </div>
+          
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="setuju" required>
+            <label class="form-check-label" for="setuju">
+              Saya menyetujui syarat dan ketentuan pemesanan
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-order btn-block">Kirim Pesanan</button>
+        </form>
+      </div>
+    </div>
+  
+  
+  </section>
+  <!--end form order-->
+
+  <!-- Modal Konfirmasi -->
+  <div class="modal fade" id="pesanModal" tabindex="-1" role="dialog" aria-labelledby="pesanModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Pesanan Berhasil!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Tutup">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Pesanan anda telah kami terima. Jika ada kendala atau habis stok, akan kami konfirmasi melalui no hp anda. Terima kasih! Semoga harimu menyenangkan -`♡´-
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- info section -->
+    <br><br>
+    <section class="info_section layout_padding2">
+      <div class="container">
+        <div class="row info_form_social_row">
+          <div class="col-md-8 col-lg-9">
+            <div class="info_form text-dark">
+              <form action="">
+                <input type="email" placeholder="Enter your email">
+                <button>
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3">
+
+            <div class="social_box">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row info_main_row">
+          <div class="col-md-6 col-lg-3">
+            <div class="info_links">
+              <h4>
+                Menu
+              </h4>
+              <div class="info_links_menu">
+                <a href="index.html">
+                  Home
+                </a>
+                <a href="about.html">
+                  About
+                </a>
+                <a href="products.html">
+                  Products
+                </a>
+                <a href="testimonial.html">
+                  Testimonial
+                </a>
+                <a href="contact.html">
+                  Contact us
+                </a>
+                <a href="order.html">
+                 Order
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="info_detail">
+              <h4>
+                Company
+              </h4>
+              <p class="mb-0">
+                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h4>
+             Contact Us
+            </h4>
+            <div class="info_contact">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Jl. Tamban, Bunut Barat, Kota Kisaran Barat.
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  +62 82163760018
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope"></i>
+                <span>
+                  cacasbread@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h4>Photo Gallery</h4>
+            <div class="row g-2 ">
+                <div class="col-4 pb-2">
+                    <img class="img-fluid bg-light rounded p-1" src="images/about-1.jpg" alt="Image">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid bg-light rounded p-1" src="images/(15).jpg" alt="Image">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid bg-light rounded p-1" src="images/(8).jpg" alt="Image">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid bg-light rounded p-1" src="images/(7).jpg" alt="Image">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid bg-light rounded p-1" src="images/(10).jpg" alt="Image">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid bg-light rounded p-1" src="images/(11).jpg" alt="Image">
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- end info_section -->
+
+     <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <div class="container">
+      <div class="col-md-11 col-lg-8 mx-auto">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="#">Caca's Bread</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script>
+    document.getElementById("displayYear").innerText = new Date().getFullYear();
+
+    document.getElementById("orderForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Tampilkan modal
+      $('#pesanModal').modal('show');
+
+      // Reset form setelah 300ms agar tidak langsung clear sebelum modal muncul
+      setTimeout(() => {
+        document.getElementById("orderForm").reset();
+      }, 300);
+    });
+  </script>
+  <!-- script varian varian-->
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const produkByVarian = {
+      chocolate: [
+        "Oreo Choux",
+        "Choco Lava Cake",
+        "Choco Swirl Hug",
+        "Chocolate Donuts"
+      ],
+      matcha: [
+        "Matcha Swiss Roll",
+        "Matcha Cookies Pistachio",
+        "Matcha-chi",
+        "Matcha Melon Pan"
+      ],
+      strawberry: [
+        "Strawbella Pie",
+        "Strawberry Rhubarb Crisp",
+        "Strawberry Silk Sandwich"
+      ],
+      vanilla: [
+        "Vanilla Custard Cream Square",
+        "Vanilla Poundcake",
+        "Vanilla Cream Horns"
+      ],
+
+      cheese: [
+        "Grilled Cheese Sandwich",
+        "Brazillian Cheese Bread",
+        "Ube Cheese Pandesal"
+      ],
+
+      tiramisu: [
+        "Tiramisu Classic Cake",
+        "Tiramisu Cup",
+        "Tiramisu Cream Cheese Roll"
+      ]
+    };
+
+    const varianSelect = document.getElementById("varian");
+    const produkSelect = document.getElementById("produk");
+
+    varianSelect.addEventListener("change", function () {
+      const selectedVarian = this.value;
+      const opsiProduk = produkByVarian[selectedVarian] || [];
+
+      // Reset isi dropdown produk
+      produkSelect.innerHTML = '<option value="">-- Pilih Produk --</option>';
+
+      // Tambahkan produk berdasarkan varian
+      opsiProduk.forEach(function (produk) {
+        const option = document.createElement("option");
+        option.value = produk;
+        option.textContent = produk;
+        produkSelect.appendChild(option);
+      });
+    });
+  });
+</script>
+
+
+</body>
+
+</html>
